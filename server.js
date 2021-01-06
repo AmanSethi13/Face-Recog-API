@@ -58,6 +58,6 @@ app.post('/imageurl', (req, res) => {
 //register
 app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcrypt)})
 
-app.listen(3000, ()=>{
-    console.log('app is running');
+app.listen(process.env.PORT || 3000, ()=>{
+    console.log(`app is running on ${process.env.PORT}`);
 })
